@@ -21,7 +21,7 @@ public class JDBCExample2 {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			String type = "jdbc:oracle:thin:@"; // JDBC 드라이버 종류
-			String ip = "localhost"; // DB 서버 컴퓨터 IP
+			String  ip = "localhost"; // DB 서버 컴퓨터 IP
 			String port = ":1521"; //포트 번호
 			String sid = ":XE"; // DB이름
 			String user = "kh"; // 사용자 계정
@@ -34,7 +34,7 @@ public class JDBCExample2 {
 			
 			int input = sc.nextInt()	;
 			
-			String sql = "SELEVT EMP_ID, EMP_NAME, SALARY FROM EMPLOYEE WHERE SALARY > " + input;
+			String sql = "SELECT EMP_ID, EMP_NAME, SALARY FROM EMPLOYEE WHERE SALARY > " + input;
 			
 			stmt = conn.createStatement();
 			
